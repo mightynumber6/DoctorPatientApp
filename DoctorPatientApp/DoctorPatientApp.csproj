@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Doctor\DoctorLogon.aspx" />
     <Content Include="Doctor\DoctorView.aspx" />
     <Content Include="HomePage.aspx" />
     <Content Include="Images\51058ac08937b9907dba40cce57eb32b--medical-logo-medical-center-logo.jpg" />
@@ -80,6 +81,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Doctor\DoctorLogon.aspx.cs">
+      <DependentUpon>DoctorLogon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Doctor\DoctorLogon.aspx.designer.cs">
+      <DependentUpon>DoctorLogon.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Doctor\DoctorView.aspx.cs">
       <DependentUpon>DoctorView.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
