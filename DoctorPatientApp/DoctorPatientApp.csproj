@@ -161,8 +161,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Doctor\Web.config" />
     <None Include="packages.config" />
     <Content Include="Site1.Master" />
+    <Content Include="Patient\Web.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -23,7 +23,7 @@
         <asp:HyperLink ID="HyperLink4" runat="server" CssClass="auto-style7" NavigateUrl="~/Patient/PatientHome.aspx">Patient View</asp:HyperLink>
     </p>
     <p>
-        <asp:HyperLink ID="HyperLink5" runat="server" CssClass="auto-style8">Doctor View</asp:HyperLink>
+        <asp:HyperLink ID="HyperLink5" runat="server" CssClass="auto-style8" NavigateUrl="~/Doctor/DoctorView.aspx">Doctor View</asp:HyperLink>
     </p>
     <p>
     </p>

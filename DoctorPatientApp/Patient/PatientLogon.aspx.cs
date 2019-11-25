@@ -11,7 +11,15 @@ namespace DoctorPatientApp.Patient
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            UnobtrusiveValidationMode = System.Web.UI.UnobtrusiveValidationMode.None;
+        }
 
+        protected void Login1_Authenticate(object sender, AuthenticateEventArgs e)
+        {
+            if (Login1.UserName == "abc" && Login1.Password == "123")
+            {
+                FormsAuthentication.RedirectFromLoginPage(Login1.UserName, true);
+            }
         }
     }
 }
