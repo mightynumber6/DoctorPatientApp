@@ -67,6 +67,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\HospitalDB.mdf" />
+    <Content Include="App_Data\HospitalDB_log.ldf">
+      <DependentUpon>HospitalDB.mdf</DependentUpon>
+    </Content>
     <Content Include="Doctor\DoctorLogon.aspx" />
     <Content Include="Doctor\DoctorView.aspx" />
     <Content Include="HomePage.aspx" />
@@ -172,7 +176,12 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
