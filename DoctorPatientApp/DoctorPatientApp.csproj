@@ -43,7 +43,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -74,6 +82,16 @@
     <Content Include="Doctor\DoctorLogon.aspx" />
     <Content Include="Doctor\DoctorView.aspx" />
     <Content Include="HomePage.aspx" />
+    <Content Include="Data\HospitalModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>HospitalModel.Context.cs</LastGenOutput>
+      <DependentUpon>HospitalModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="Data\HospitalModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>HospitalModel.edmx</DependentUpon>
+      <LastGenOutput>HospitalModel.cs</LastGenOutput>
+    </Content>
     <Content Include="Images\51058ac08937b9907dba40cce57eb32b--medical-logo-medical-center-logo.jpg" />
     <Content Include="Patient\PatAppointments.aspx" />
     <Content Include="Patient\PatientLogon.aspx" />
@@ -85,6 +103,12 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\AppointmentsTable.cs">
+      <DependentUpon>HospitalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DoctorsTable.cs">
+      <DependentUpon>HospitalModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Doctor\DoctorLogon.aspx.cs">
       <DependentUpon>DoctorLogon.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -105,6 +129,30 @@
     </Compile>
     <Compile Include="HomePage.aspx.designer.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\HospitalModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HospitalModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\HospitalModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HospitalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\HospitalModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HospitalModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MedicationListTable.cs">
+      <DependentUpon>HospitalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MessagesTable.cs">
+      <DependentUpon>HospitalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PatientsTable.cs">
+      <DependentUpon>HospitalModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Patient\PatAppointments.aspx.cs">
       <DependentUpon>PatAppointments.aspx</DependentUpon>
@@ -163,9 +211,22 @@
     <Compile Include="Site1.Master.designer.cs">
       <DependentUpon>Site1.Master</DependentUpon>
     </Compile>
+    <Compile Include="Data\TestsTable.cs">
+      <DependentUpon>HospitalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\UsersTable.cs">
+      <DependentUpon>HospitalModel.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Doctor\Web.config" />
+    <EntityDeploy Include="Data\HospitalModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>HospitalModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Data\HospitalModel.edmx.diagram">
+      <DependentUpon>HospitalModel.edmx</DependentUpon>
+    </Content>
     <None Include="packages.config" />
     <Content Include="Site1.Master" />
     <Content Include="Patient\Web.config" />
@@ -179,9 +240,7 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

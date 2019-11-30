@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0f24ef1cd75043c6bde13db9ac781f7b" Name="Diagram1">
+        <EntityTypeShape EntityType="HospitalDBModel.AppointmentsTable" Width="1.5" PointX="5.25" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalDBModel.DoctorsTable" Width="1.5" PointX="3" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalDBModel.MedicationListTable" Width="1.5" PointX="10.5" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalDBModel.MessagesTable" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalDBModel.PatientsTable" Width="1.5" PointX="8.25" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalDBModel.TestsTable" Width="1.5" PointX="10.5" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalDBModel.UsersTable" Width="1.5" PointX="0.75" PointY="4.625" IsExpanded="true" />
+        <AssociationConnector Association="HospitalDBModel.FK__Appointme__Docto__35BCFE0A" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalDBModel.FK__Appointme__Patie__34C8D9D1" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalDBModel.FK__DoctorsTa__UserL__38996AB5" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalDBModel.FK__PatientsT__Docto__37A5467C" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalDBModel.FK__TestsTabl__Docto__3A81B327" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalDBModel.FK__Medicatio__Patie__36B12243" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalDBModel.FK__PatientsT__Medic__3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalDBModel.FK__PatientsT__TestI__3D5E1FD2" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalDBModel.FK__PatientsT__UserL__3B75D760" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalDBModel.FK__TestsTabl__Patie__398D8EEE" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
