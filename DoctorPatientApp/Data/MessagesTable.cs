@@ -19,5 +19,8 @@ namespace DoctorPatientApp.Data
         public string MessageFROM { get; set; }
         public System.DateTime Date { get; set; }
         public string Message { get; set; }
+    
+        public virtual UsersTable UsersTable { get; set; }
+        public virtual UsersTable UsersTable1 { get; set; }
     }
 }
