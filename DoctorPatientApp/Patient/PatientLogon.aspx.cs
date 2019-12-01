@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.Security;
+using System.Data.Entity;
+using System.Data.Entity.Validation;
 
 namespace DoctorPatientApp.Patient
 {
@@ -15,9 +17,13 @@ namespace DoctorPatientApp.Patient
             UnobtrusiveValidationMode = System.Web.UI.UnobtrusiveValidationMode.None;
         }
 
+        private DoctorPatientApp.Data.FinalHospitalDBUghEntities dbcon = new Data.FinalHospitalDBUghEntities();
+
         protected void Login1_Authenticate(object sender, AuthenticateEventArgs e)
         {
-            if (Login1.UserName == "abc" && Login1.Password == "123")
+            if (dbcon.UsersTables.Find(Login1.UserName).UserLoginName == Login1.UserName 
+                && dbcon.UsersTables.Find(Login1.Password).UserLoginPass == Login1.Password 
+                && dbcon.UsersTables.Find(Login1.UserName).UserLoginType == "Patient")
             {
                 FormsAuthentication.RedirectFromLoginPage(Login1.UserName, true);
             }
