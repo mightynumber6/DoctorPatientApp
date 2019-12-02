@@ -19,6 +19,7 @@ namespace DoctorPatientApp.Patient
 
         private DoctorPatientApp.Data.FinalHospitalDBUghEntities dbcon = new Data.FinalHospitalDBUghEntities();
 
+        //have the login1 authenticate by going through the UsersTable and finding if the login, pass, and type match up with a specific patient user
         protected void Login1_Authenticate(object sender, AuthenticateEventArgs e)
         {
             if (dbcon.UsersTables.Find(Login1.UserName).UserLoginName == Login1.UserName 

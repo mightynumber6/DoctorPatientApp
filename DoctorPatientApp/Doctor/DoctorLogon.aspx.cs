@@ -15,6 +15,7 @@ namespace DoctorPatientApp.Doctor
             UnobtrusiveValidationMode = System.Web.UI.UnobtrusiveValidationMode.None;
         }
 
+        //have the login1 authenticate by going through the UsersTable and finding if the login, pass, and type match up with a specific doctor user
         protected void Login1_Authenticate(object sender, AuthenticateEventArgs e)
         {
             if (Login1.UserName == "abc" && Login1.Password == "123")

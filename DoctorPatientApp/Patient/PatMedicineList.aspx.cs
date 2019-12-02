@@ -9,6 +9,7 @@ namespace DoctorPatientApp.Patient
 {
     public partial class PatMedicineList : System.Web.UI.Page
     {
+        // make label1's text match the name of the user who is currently logged in, and fill the listbox with their associated list of medications
         protected void Page_Load(object sender, EventArgs e)
         {
 
