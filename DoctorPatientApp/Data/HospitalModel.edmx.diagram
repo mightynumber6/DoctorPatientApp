@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="cc5302d144e44135a0a0d8309707cc5d" Name="Diagram1">
+      <Diagram DiagramId="c074a9195f7341829fbce8369e23e9d6" Name="Diagram1">
         <EntityTypeShape EntityType="HospitalDBModel.AppointmentsTable" Width="1.5" PointX="5.25" PointY="4.5" IsExpanded="true" />
         <EntityTypeShape EntityType="HospitalDBModel.DoctorsTable" Width="1.5" PointX="3" PointY="4.25" IsExpanded="true" />
         <EntityTypeShape EntityType="HospitalDBModel.MedicationListTable" Width="1.5" PointX="10.5" PointY="5.375" IsExpanded="true" />
@@ -17,11 +17,11 @@
         <AssociationConnector Association="HospitalDBModel.FK__DoctorsTa__UserL__38996AB5" ManuallyRouted="false" />
         <AssociationConnector Association="HospitalDBModel.FK__PatientsT__Docto__37A5467C" ManuallyRouted="false" />
         <AssociationConnector Association="HospitalDBModel.FK__TestsTabl__Docto__3A81B327" ManuallyRouted="false" />
-        <AssociationConnector Association="HospitalDBModel.FK__Medicatio__Patie__36B12243" ManuallyRouted="false" />
-        <AssociationConnector Association="HospitalDBModel.FK__PatientsT__Medic__3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalDBModel.FK__Medicatio__Patie__5DCAEF64" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalDBModel.FK__PatientsT__Medic__5AEE82B9" ManuallyRouted="false" />
         <AssociationConnector Association="HospitalDBModel.FK__MessagesT__Messa__47DBAE45" ManuallyRouted="false" />
         <AssociationConnector Association="HospitalDBModel.FK__MessagesT__Messa__48CFD27E" ManuallyRouted="false" />
-        <AssociationConnector Association="HospitalDBModel.FK__PatientsT__TestI__3D5E1FD2" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalDBModel.FK__PatientsT__TestI__5CD6CB2B" ManuallyRouted="false" />
         <AssociationConnector Association="HospitalDBModel.FK__PatientsT__UserL__3B75D760" ManuallyRouted="false" />
         <AssociationConnector Association="HospitalDBModel.FK__TestsTabl__Patie__398D8EEE" ManuallyRouted="false" />
       </Diagram>

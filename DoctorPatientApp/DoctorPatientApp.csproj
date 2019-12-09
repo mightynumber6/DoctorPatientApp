@@ -79,17 +79,21 @@
     <Content Include="App_Data\HospitalDB_log.ldf">
       <DependentUpon>HospitalDB.mdf</DependentUpon>
     </Content>
-    <Content Include="Data\HospitalDBModel.Context.tt">
+    <Content Include="Data\HospitalModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>HospitalDBModel.edmx</DependentUpon>
-      <LastGenOutput>HospitalDBModel.Context.cs</LastGenOutput>
+      <DependentUpon>HospitalModel.edmx</DependentUpon>
+      <LastGenOutput>HospitalModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Data\HospitalDBModel.tt">
+    <Content Include="Data\HospitalModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>HospitalDBModel.edmx</DependentUpon>
-      <LastGenOutput>HospitalDBModel.cs</LastGenOutput>
+      <DependentUpon>HospitalModel.edmx</DependentUpon>
+      <LastGenOutput>HospitalModel.cs</LastGenOutput>
     </Content>
+    <Content Include="Doctor\DoctorAppointments.aspx" />
     <Content Include="Doctor\DoctorLogon.aspx" />
+    <Content Include="Doctor\DoctorMessages.aspx" />
+    <Content Include="Doctor\DoctorNewAppointment.aspx" />
+    <Content Include="Doctor\DoctorPatients.aspx" />
     <Content Include="Doctor\DoctorView.aspx" />
     <Content Include="HomePage.aspx" />
     <Content Include="Images\51058ac08937b9907dba40cce57eb32b--medical-logo-medical-center-logo.jpg" />
@@ -104,40 +108,47 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\AppointmentsTable.cs">
-      <DependentUpon>HospitalDBModel.tt</DependentUpon>
+      <DependentUpon>HospitalModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Data\DoctorsTable.cs">
-      <DependentUpon>HospitalDBModel.tt</DependentUpon>
+      <DependentUpon>HospitalModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Data\HospitalDBModel.Context.cs">
+    <Compile Include="Data\HospitalModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>HospitalDBModel.Context.tt</DependentUpon>
+      <DependentUpon>HospitalModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Data\HospitalDBModel.cs">
+    <Compile Include="Data\HospitalModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>HospitalDBModel.tt</DependentUpon>
+      <DependentUpon>HospitalModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Data\HospitalDBModel.Designer.cs">
+    <Compile Include="Data\HospitalModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>HospitalDBModel.edmx</DependentUpon>
+      <DependentUpon>HospitalModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Data\MedicationListTable.cs">
-      <DependentUpon>HospitalDBModel.tt</DependentUpon>
+      <DependentUpon>HospitalModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Data\MessagesTable.cs">
-      <DependentUpon>HospitalDBModel.tt</DependentUpon>
+      <DependentUpon>HospitalModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Data\PatientsTable.cs">
-      <DependentUpon>HospitalDBModel.tt</DependentUpon>
+      <DependentUpon>HospitalModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Data\TestsTable.cs">
-      <DependentUpon>HospitalDBModel.tt</DependentUpon>
+      <DependentUpon>HospitalModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Data\UsersTable.cs">
-      <DependentUpon>HospitalDBModel.tt</DependentUpon>
+      <DependentUpon>HospitalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Doctor\DoctorAppointments.aspx.cs">
+      <DependentUpon>DoctorAppointments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Doctor\DoctorAppointments.aspx.designer.cs">
+      <DependentUpon>DoctorAppointments.aspx</DependentUpon>
     </Compile>
     <Compile Include="Doctor\DoctorLogon.aspx.cs">
       <DependentUpon>DoctorLogon.aspx</DependentUpon>
@@ -145,6 +156,27 @@
     </Compile>
     <Compile Include="Doctor\DoctorLogon.aspx.designer.cs">
       <DependentUpon>DoctorLogon.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Doctor\DoctorMessages.aspx.cs">
+      <DependentUpon>DoctorMessages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Doctor\DoctorMessages.aspx.designer.cs">
+      <DependentUpon>DoctorMessages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Doctor\DoctorNewAppointment.aspx.cs">
+      <DependentUpon>DoctorNewAppointment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Doctor\DoctorNewAppointment.aspx.designer.cs">
+      <DependentUpon>DoctorNewAppointment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Doctor\DoctorPatients.aspx.cs">
+      <DependentUpon>DoctorPatients.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Doctor\DoctorPatients.aspx.designer.cs">
+      <DependentUpon>DoctorPatients.aspx</DependentUpon>
     </Compile>
     <Compile Include="Doctor\DoctorView.aspx.cs">
       <DependentUpon>DoctorView.aspx</DependentUpon>
@@ -220,12 +252,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Doctor\Web.config" />
-    <EntityDeploy Include="Data\HospitalDBModel.edmx">
+    <EntityDeploy Include="Data\HospitalModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>HospitalDBModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>HospitalModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Data\HospitalDBModel.edmx.diagram">
-      <DependentUpon>HospitalDBModel.edmx</DependentUpon>
+    <Content Include="Data\HospitalModel.edmx.diagram">
+      <DependentUpon>HospitalModel.edmx</DependentUpon>
     </Content>
     <None Include="packages.config" />
     <Content Include="Site1.Master" />

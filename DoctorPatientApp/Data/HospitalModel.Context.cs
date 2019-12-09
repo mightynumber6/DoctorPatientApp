@@ -13,10 +13,10 @@ namespace DoctorPatientApp.Data
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class FinalHospitalDBUghEntities : DbContext
+    public partial class HospitalDBEntitiesFinal : DbContext
     {
-        public FinalHospitalDBUghEntities()
-            : base("name=FinalHospitalDBUghEntities")
+        public HospitalDBEntitiesFinal()
+            : base("name=HospitalDBEntitiesFinal")
         {
         }
     
