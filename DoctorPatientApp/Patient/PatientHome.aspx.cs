@@ -9,6 +9,7 @@ namespace DoctorPatientApp
 {
     public partial class PatientView : System.Web.UI.Page
     {
+        //have the text for Label1 be the login user's name
         protected void Page_Load(object sender, EventArgs e)
         {
 
