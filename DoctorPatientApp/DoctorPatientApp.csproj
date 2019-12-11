@@ -79,15 +79,15 @@
     <Content Include="App_Data\HospitalDB_log.ldf">
       <DependentUpon>HospitalDB.mdf</DependentUpon>
     </Content>
-    <Content Include="Data\HospitalModel.Context.tt">
+    <Content Include="Data\HosptialDBModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>HospitalModel.edmx</DependentUpon>
-      <LastGenOutput>HospitalModel.Context.cs</LastGenOutput>
+      <DependentUpon>HosptialDBModel.edmx</DependentUpon>
+      <LastGenOutput>HosptialDBModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Data\HospitalModel.tt">
+    <Content Include="Data\HosptialDBModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>HospitalModel.edmx</DependentUpon>
-      <LastGenOutput>HospitalModel.cs</LastGenOutput>
+      <DependentUpon>HosptialDBModel.edmx</DependentUpon>
+      <LastGenOutput>HosptialDBModel.cs</LastGenOutput>
     </Content>
     <Content Include="Doctor\DoctorAppointments.aspx" />
     <Content Include="Doctor\DoctorLogon.aspx" />
@@ -108,40 +108,40 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\AppointmentsTable.cs">
-      <DependentUpon>HospitalModel.tt</DependentUpon>
+      <DependentUpon>HosptialDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Data\DoctorsTable.cs">
-      <DependentUpon>HospitalModel.tt</DependentUpon>
+      <DependentUpon>HosptialDBModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Data\HospitalModel.Context.cs">
+    <Compile Include="Data\HosptialDBModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>HospitalModel.Context.tt</DependentUpon>
+      <DependentUpon>HosptialDBModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Data\HospitalModel.cs">
+    <Compile Include="Data\HosptialDBModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>HospitalModel.tt</DependentUpon>
+      <DependentUpon>HosptialDBModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Data\HospitalModel.Designer.cs">
+    <Compile Include="Data\HosptialDBModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>HospitalModel.edmx</DependentUpon>
+      <DependentUpon>HosptialDBModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Data\MedicationListTable.cs">
-      <DependentUpon>HospitalModel.tt</DependentUpon>
+      <DependentUpon>HosptialDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Data\MessagesTable.cs">
-      <DependentUpon>HospitalModel.tt</DependentUpon>
+      <DependentUpon>HosptialDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Data\PatientsTable.cs">
-      <DependentUpon>HospitalModel.tt</DependentUpon>
+      <DependentUpon>HosptialDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Data\TestsTable.cs">
-      <DependentUpon>HospitalModel.tt</DependentUpon>
+      <DependentUpon>HosptialDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Data\UsersTable.cs">
-      <DependentUpon>HospitalModel.tt</DependentUpon>
+      <DependentUpon>HosptialDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Doctor\DoctorAppointments.aspx.cs">
       <DependentUpon>DoctorAppointments.aspx</DependentUpon>
@@ -252,12 +252,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Doctor\Web.config" />
-    <EntityDeploy Include="Data\HospitalModel.edmx">
+    <EntityDeploy Include="Data\HosptialDBModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>HospitalModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>HosptialDBModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Data\HospitalModel.edmx.diagram">
-      <DependentUpon>HospitalModel.edmx</DependentUpon>
+    <Content Include="Data\HosptialDBModel.edmx.diagram">
+      <DependentUpon>HosptialDBModel.edmx</DependentUpon>
     </Content>
     <None Include="packages.config" />
     <Content Include="Site1.Master" />
